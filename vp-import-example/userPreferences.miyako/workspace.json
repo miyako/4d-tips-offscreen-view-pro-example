@@ -1,0 +1,55 @@
+﻿{
+	"editors": [
+		{
+			"type": "method",
+			"id": 2147483645,
+			"previousTabType": "method",
+			"previousTabID": 2147483646,
+			"codeDescriptor": {
+				"type": 1,
+				"methodName": "myVpExporter"
+			}
+		},
+		{
+			"type": "method",
+			"id": 2147483646,
+			"previousTabType": "method",
+			"previousTabID": 2147483647,
+			"codeDescriptor": {
+				"type": 1,
+				"methodName": "myVpProcessor"
+			}
+		},
+		{
+			"type": "method",
+			"id": 2147483647,
+			"previousTabType": "form",
+			"previousTabID": 476,
+			"codeDescriptor": {
+				"type": 1,
+				"methodName": "myVpConverter"
+			}
+		},
+		{
+			"type": "form",
+			"id": 476,
+			"previousTabType": "method",
+			"previousTabID": 2147483644,
+			"formName": "フォーム1"
+		},
+		{
+			"type": "method",
+			"id": 2147483644,
+			"codeDescriptor": {
+				"type": 1,
+				"methodName": "TEST"
+			}
+		},
+		{
+			"type": "explorer"
+		},
+		{
+			"type": "toolbox"
+		}
+	]
+}

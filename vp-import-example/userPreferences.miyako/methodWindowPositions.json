@@ -1,0 +1,32 @@
+﻿{
+	"Sources/Methods/TEST.4dm": {
+		"left": 224,
+		"top": 213,
+		"width": 1060,
+		"height": 647
+	},
+	"Sources/Methods/myVpConverter.4dm": {
+		"left": 224,
+		"top": 213,
+		"width": 1060,
+		"height": 647
+	},
+	"Sources/Methods/myVpProcessor.4dm": {
+		"left": 224,
+		"top": 213,
+		"width": 1060,
+		"height": 647
+	},
+	"Sources/Methods/myVpExporter.4dm": {
+		"left": 224,
+		"top": 213,
+		"width": 1060,
+		"height": 647
+	},
+	"Sources/Methods/myVpImporter.4dm": {
+		"left": 208,
+		"top": 341,
+		"width": 1050,
+		"height": 548
+	}
+}

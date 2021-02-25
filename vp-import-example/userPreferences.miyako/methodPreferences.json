@@ -1,0 +1,47 @@
+﻿{
+	"Sources/Methods/TEST.4dm": {
+		"startSelection": 20,
+		"endSelection": 20,
+		"firstSelectedLine": 26,
+		"lastSelectedLine": 26,
+		"folding": [],
+		"bookmarks": [],
+		"stamp": "2021-02-25T05:13:10.860Z"
+	},
+	"Sources/Methods/myVpConverter.4dm": {
+		"startSelection": 0,
+		"endSelection": 0,
+		"firstSelectedLine": 14,
+		"lastSelectedLine": 14,
+		"folding": [],
+		"bookmarks": [],
+		"stamp": "2021-02-25T05:13:18.395Z"
+	},
+	"Sources/Methods/myVpProcessor.4dm": {
+		"startSelection": 0,
+		"endSelection": 0,
+		"firstSelectedLine": 6,
+		"lastSelectedLine": 6,
+		"folding": [],
+		"bookmarks": [],
+		"stamp": "2021-02-25T05:13:23.732Z"
+	},
+	"Sources/Methods/myVpExporter.4dm": {
+		"startSelection": 7,
+		"endSelection": 7,
+		"firstSelectedLine": 15,
+		"lastSelectedLine": 15,
+		"folding": [],
+		"bookmarks": [],
+		"stamp": "2021-02-25T05:13:31.202Z"
+	},
+	"Sources/Methods/myVpImporter.4dm": {
+		"startSelection": 7,
+		"endSelection": 7,
+		"firstSelectedLine": 13,
+		"lastSelectedLine": 13,
+		"folding": [],
+		"bookmarks": [],
+		"stamp": "2021-02-25T04:36:02.189Z"
+	}
+}
