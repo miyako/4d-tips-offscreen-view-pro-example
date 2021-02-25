@@ -19,4 +19,16 @@ View Proオフスクリーンエリアの例題
 
 # 既知の😷😷
 
-**ACI0101754**: 日本語のフォントが文字化けしますね。「メイリオ」なら読めますが，メイリオフォントが出力されるわけでもなさそうです。[これ](https://devlog.grapecity.co.jp/spreadjs-pdfexport/)と同じ問題でしょうか。
+**ACI0101754**: 日本語のフォントが文字化けしますね。「メイリオ」なら読めますが，メイリオフォントが出力されるわけでもなさそうです。[これ](https://devlog.grapecity.co.jp/spreadjs-pdfexport/)と同じ問題でしょうか。ちなみに4DのSpreadJSバージョンは下記のとおり：
+
+|4D|SpreadJS|
+|19|14|
+|18 R6|14|
+|18 R5|13|
+|18 R4|13|
+|18|12|
+
+参考: https://discuss.4d.com/t/4d-view-pro-spreadjs-update/17604
+
+[Font file]とJavaSciptのインジェクションで回避できるのでしょうか。SpreadJSは内部的にpdkKitを使用しているため，Unicodeを有するOpenTypeフォントだけが対応しています。仕様では，`VP EXPORT DOCUMENT`は，ドキュメント内で使用されているシステムフォント(`.OTF` または `.TTF` ファイル)を自動的に探し，埋め込む（SpreadJSが管理しているフォントはスキップ）ようになっており，[Font file]でフォントがみつからない場合はSpreadJSのデフォルトフォントを使用することになっています。
+
