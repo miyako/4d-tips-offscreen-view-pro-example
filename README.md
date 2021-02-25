@@ -5,3 +5,6 @@
 # 4d-tips-offscreen-view-pro-example
 View Proオフスクリーンエリアの例題
 
+#### 対応バージョン
+
+* View Proエリアのオフスクリーンコールバックは使用していますが，18 R6の`On VP Range Changed` `on Timer` イベントは使用していないので，v18でOK
