@@ -33,3 +33,4 @@ View Proオフスクリーンエリアの例題
 
 [Font file](https://doc.4d.com/4Dv18R5/4D/18-R5/Font-file.301-5127874.ja.html)とJavaScriptのインジェクションで回避できるのでしょうか。SpreadJSは内部的に[pdfkit]を使用しているため，Unicodeを有するOpenTypeフォントだけが対応しています。仕様では，`VP EXPORT DOCUMENT`は，ドキュメント内で使用されているシステムフォント(`.OTF` または `.TTF` ファイル)を自動的に探し，埋め込む（SpreadJSが管理しているフォントはスキップ）ようになっており，[Font file](https://doc.4d.com/4Dv18R5/4D/18-R5/Font-file.301-5127874.ja.html)でフォントがみつからない場合はSpreadJSのデフォルトフォントを使用することになっています。
 
+その他: https://github.com/4D-JP/4D-jp.github.io/blob/master/_posts/2020-01-24-embed-font-in-pdf.md
