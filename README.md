@@ -9,5 +9,7 @@ View Proオフスクリーンエリアの例題
 
 * [18 R4のオフスクリーンエリア](https://blog.4d.com/4d-view-pro-offscreen-areas/)を使用しています。
  
+* [18 R3のクラスストア](https://blog.4d.com/an-intro-to-object-oriented-programming-in-4d-classes/)は使用していません。
+* 
 * [18 R6の`On VP Range Changed`, `On Timer`](https://blog.4d.com/4d-view-pro-end-of-document-loading/)は使用していません。
 
