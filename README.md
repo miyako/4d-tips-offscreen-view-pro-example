@@ -31,5 +31,5 @@ View Proオフスクリーンエリアの例題
 
 参考: https://discuss.4d.com/t/4d-view-pro-spreadjs-update/17604
 
-[Font file](https://doc.4d.com/4Dv18R5/4D/18-R5/Font-file.301-5127874.ja.html)とJavaSciptのインジェクションで回避できるのでしょうか。SpreadJSは内部的にpdkKitを使用しているため，Unicodeを有するOpenTypeフォントだけが対応しています。仕様では，`VP EXPORT DOCUMENT`は，ドキュメント内で使用されているシステムフォント(`.OTF` または `.TTF` ファイル)を自動的に探し，埋め込む（SpreadJSが管理しているフォントはスキップ）ようになっており，[Font file](https://doc.4d.com/4Dv18R5/4D/18-R5/Font-file.301-5127874.ja.html)でフォントがみつからない場合はSpreadJSのデフォルトフォントを使用することになっています。
+[Font file](https://doc.4d.com/4Dv18R5/4D/18-R5/Font-file.301-5127874.ja.html)とJavaScriptのインジェクションで回避できるのでしょうか。SpreadJSは内部的にpdkKitを使用しているため，Unicodeを有するOpenTypeフォントだけが対応しています。仕様では，`VP EXPORT DOCUMENT`は，ドキュメント内で使用されているシステムフォント(`.OTF` または `.TTF` ファイル)を自動的に探し，埋め込む（SpreadJSが管理しているフォントはスキップ）ようになっており，[Font file](https://doc.4d.com/4Dv18R5/4D/18-R5/Font-file.301-5127874.ja.html)でフォントがみつからない場合はSpreadJSのデフォルトフォントを使用することになっています。
 
