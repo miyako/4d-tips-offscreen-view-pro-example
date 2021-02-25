@@ -7,4 +7,4 @@ View Proオフスクリーンエリアの例題
 
 #### 対応バージョン: v18 LTS
 
-* View Proエリアのオフスクリーンコールバックは使用していますが，[18 R6の`On VP Range Changed` `on Timer` イベント](https://blog.4d.com/4d-view-pro-end-of-document-loading/)は使用していません。
+* [18 R6の`On VP Range Changed` `on Timer` イベント](https://blog.4d.com/4d-view-pro-end-of-document-loading/)は使用していません。
