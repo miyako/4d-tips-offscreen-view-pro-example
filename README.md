@@ -34,3 +34,52 @@ View Proオフスクリーンエリアの例題
 [Font file](https://doc.4d.com/4Dv18R5/4D/18-R5/Font-file.301-5127874.ja.html)とJavaScriptのインジェクションで回避できるのでしょうか。SpreadJSは内部的に[pdfkit]を使用しているため，Unicodeを有するOpenTypeフォントだけが対応しています。`VP EXPORT DOCUMENT`は，ドキュメント内で使用されているシステムフォント(`.OTF` または `.TTF` ファイル)を自動的に探し，埋め込む（SpreadJSが管理しているフォントはスキップする）ようになっており，[Font file](https://doc.4d.com/4Dv18R5/4D/18-R5/Font-file.301-5127874.ja.html)でフォントがみつからない場合はSpreadJSのデフォルトが使用されることになっています。
 
 その他: https://4d-jp.github.io/2020/01/24/embed-font-in-pdf/
+
+追記: SpreadJSの技を試してみましたが，View Proには効かないようでした
+
+```4d
+C_TEXT($1; $area)
+
+$area:=$1
+
+C_OBJECT($fontObj; $fontFile)
+C_TEXT($fontData)
+
+$fontObj:=New object
+$fonts:=New collection(\
+New object("file"; "游ゴシック体"; "name"; "normal"))
+
+For each ($font; $fonts)
+	
+	$fontFile:=Font file($font.file)
+	
+	If ($fontFile#Null)
+		$fontFileContent:=$fontFile.getContent()
+		BASE64 ENCODE($fontFileContent; $fontData)
+		$fontObj[$font.name]:=$fontData
+	End if 
+	
+End for each 
+
+WA EXECUTE JAVASCRIPT FUNCTION(*; $area; "GC.Spread.Sheets.PDF.PDFFontsManager.registerFont"; $eval; $fontObj)
+
+$js:=New object("_"; New collection; "add"; Formula(This._.push($1)); "code"; Formula(This._.join()); "clear"; Formula(This._.clear()))
+
+$js.add("typeof GC.Spread.Sheets.PDF.PDFFontsManager.fallbackFont")
+
+$eval:=WA Evaluate JavaScript(*; $area; $js.code())
+
+$js.clear()
+
+$js.add("GC.Spread.Sheets.PDF.PDFFontsManager.fallbackFont = function(font){")
+$js.add("  var fontInfoArray = font.split(' ');")
+$js.add("  var fontName = fontInfoArray[fontInfoArray.length - 1];")
+$js.add("  if (fontName === 'Calibri') {")
+$js.add("    return '"+$fontObj.normal+"';")
+$js.add("  }")
+$js.add("}")
+
+$eval:=WA Evaluate JavaScript(*; $area; $js.code())
+
+WA EXECUTE JAVASCRIPT FUNCTION(*; $area; "GC.Spread.Sheets.PDF.PDFFontsManager.fallbackFont"; $eval; "Calibri")
+```
